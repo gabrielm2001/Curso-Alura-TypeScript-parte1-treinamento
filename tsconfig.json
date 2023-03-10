@@ -4,4 +4,5 @@
         "target": "ES6",
     },
     "include": ["app/**/*"],
+    "noEmitOnError": true,
 }

@@ -1,4 +1,4 @@
-import { Negociacao } from "./models/negociacao";
+import { Negociacao } from "./models/negociacao.js";
 
 const negociacao = new Negociacao(
     new Date(),
@@ -6,6 +6,6 @@ const negociacao = new Negociacao(
     10
 ) 
 
-
+console.log(negociacao.volume)
 
 
