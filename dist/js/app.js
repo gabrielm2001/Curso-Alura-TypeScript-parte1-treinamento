@@ -20,11 +20,25 @@
 //     console.log(controler.adiciona())
 //     controler.limparFormulario()
 // })
-import { negociacao_controller } from "./controllers/negociacao_controller.js";
+// const form = document.querySelector('.form')
+// form.addEventListener('submit', event=>{
+//     event.preventDefault()
+//     const negociacao = new negociacao_controller()
+//     console.log(negociacao.adiciona())
+//     negociacao.limparFormulário()
+// })
+import { negociacao_controler } from "./controllers/negociacao_controller.js";
+// const form = document.querySelector('.form')
+// form.addEventListener('submit', event=>{
+//     event.preventDefault()
+//     const negociacao = new negociacao_controler()
+//     negociacao.adicina()
+//     negociacao.limpar_form()
+// })
 const form = document.querySelector('.form');
 form.addEventListener('submit', event => {
     event.preventDefault();
-    const negociacao = new negociacao_controller();
-    console.log(negociacao.adiciona());
-    negociacao.limparFormulário();
+    const negociacao = new negociacao_controler();
+    negociacao.adiciona();
+    negociacao.limpar_form();
 });

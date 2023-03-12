@@ -1,10 +1,21 @@
+// {
+//     "compilerOptions": {
+//         "outDir": "dist/js",
+//         "target": "ES6",
+//         "noEmitOnError": true,
+//         "noImplicitAny": true
+//     },
+//     "include": ["app/**/*"],
+// }
+
+
 {
     "compilerOptions": {
-        "outDir": "dist/js",
-        "target": "ES6",
         "noEmitOnError": true,
-        "noImplicitAny": true
+        "noImplicitAny": true,
+        "outDir": "dist/js",
+        "target": "ES6"
     },
-    "include": ["app/**/*"],
+    "include": ["app/**/*"]
 }
     
