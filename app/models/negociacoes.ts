@@ -2,6 +2,8 @@
 
 import { Negociacao } from "./negociacao_model.js";
 
+// import { Negociacao } from "./negociacao_model.js";
+
 
 
 
@@ -60,12 +62,27 @@ import { Negociacao } from "./negociacao_model.js";
 // }
 
 
+// export class Negociacoes{
+
+//     private static negociacoes: Array<Negociacao> = []
+
+//     adiciona(negociacao: Negociacao){
+//         return Negociacoes.negociacoes.push(negociacao)
+//     }
+
+//     lista(): ReadonlyArray<Negociacao>{
+//         return Negociacoes.negociacoes
+//     }
+
+// }
+
+
 export class Negociacoes{
 
     private static negociacoes: Array<Negociacao> = []
 
     adiciona(negociacao: Negociacao){
-        return Negociacoes.negociacoes.push(negociacao)
+        Negociacoes.negociacoes.push(negociacao)
     }
 
     lista(): ReadonlyArray<Negociacao>{

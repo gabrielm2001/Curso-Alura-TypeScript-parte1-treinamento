@@ -1,4 +1,6 @@
 // // import { Negociacao } from "./models/negociacao.js";
+import { negociacao_controler } from "./controllers/negociacao_controller.js";
+import { Negociacoes } from "./models/negociacoes.js";
 // // const negociacao = new Negociacao(
 // //     new Date(),
 // //     10,
@@ -27,7 +29,7 @@
 //     console.log(negociacao.adiciona())
 //     negociacao.limparFormulário()
 // })
-import { negociacao_controler } from "./controllers/negociacao_controller.js";
+// import { negociacao_controler } from "./controllers/negociacao_controller.js"
 // const form = document.querySelector('.form')
 // form.addEventListener('submit', event=>{
 //     event.preventDefault()
@@ -35,10 +37,19 @@ import { negociacao_controler } from "./controllers/negociacao_controller.js";
 //     negociacao.adicina()
 //     negociacao.limpar_form()
 // })
+// const form = document.querySelector('.form')
+// form.addEventListener('submit', event=>{
+//     event.preventDefault()
+//     const negociacao = new negociacao_controler()
+//     negociacao.adiciona()
+//     negociacao.limpar_form()
+// })
 const form = document.querySelector('.form');
 form.addEventListener('submit', event => {
     event.preventDefault();
     const negociacao = new negociacao_controler();
-    negociacao.adiciona();
+    negociacao.cria_negociacao();
     negociacao.limpar_form();
+    const negociacoes = new Negociacoes();
+    console.log(negociacoes.lista());
 });

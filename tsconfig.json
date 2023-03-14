@@ -9,13 +9,27 @@
 // }
 
 
+// {
+//     "compilerOptions": {
+//         "noEmitOnError": true,
+//         "noImplicitAny": true,
+//         "outDir": "dist/js",
+//         "target": "ES6"
+//     },
+//     "include": ["app/**/*"]
+// }
+    
+
 {
     "compilerOptions": {
-        "noEmitOnError": true,
         "noImplicitAny": true,
-        "outDir": "dist/js",
-        "target": "ES6"
+        "noEmitOnError": true,
+        "target": "ES6",
+        "outDir": "dist/js"
     },
-    "include": ["app/**/*"]
+
+    "include": ["app/**/*"] 
+
 }
-    
+
+

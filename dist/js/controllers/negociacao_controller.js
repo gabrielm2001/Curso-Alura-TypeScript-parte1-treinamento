@@ -1,6 +1,8 @@
 // import { Negociacao } from "../models/negociacao_model.js";
 import { Negociacao } from "../models/negociacao_model.js";
 import { Negociacoes } from "../models/negociacoes.js";
+// import { Negociacao } from "../models/negociacao_model.js"
+// import { Negociacoes } from "../models/negociacoes.js"
 // export class negociacao_controller{
 //     private inputData: HTMLInputElement
 //     private inputQuantidade: HTMLInputElement
@@ -88,25 +90,53 @@ import { Negociacoes } from "../models/negociacoes.js";
 //         this.HTML_data.focus()
 //     }
 // }
+// export class negociacao_controler{
+//     private HTML_data: HTMLInputElement
+//     private HTML_quantidade: HTMLInputElement
+//     private HTML_valor: HTMLInputElement
+//     private negociacoes = new Negociacoes()
+//     constructor(){
+//         this.HTML_data = document.querySelector('#data')
+//         this.HTML_quantidade = document.querySelector('#quantidade')
+//         this.HTML_valor = document.querySelector('#valor')
+//         this.criar_negociacao()
+//     }
+//     adiciona(){
+//         const negociacao = this.criar_negociacao()
+//         this.negociacoes.adiciona(negociacao)
+//         console.log(this.negociacoes.lista())
+//     }
+//     criar_negociacao(): Negociacao{
+//         const exp = /-/g
+//         const data = new Date(this.HTML_data.value.replace(exp, ','))
+//         const quantidade = parseInt(this.HTML_quantidade.value)
+//         const value = parseInt(this.HTML_valor.value)
+//         return new Negociacao(data, quantidade, value)
+//     }
+//     limpar_form(){
+//         this.HTML_data.value = ''
+//         this.HTML_quantidade.value = ''
+//         this.HTML_valor.value = ''
+//         this.HTML_data.focus()
+//     }
+// }
 export class negociacao_controler {
     constructor() {
         this.negociacoes = new Negociacoes();
         this.HTML_data = document.querySelector('#data');
         this.HTML_quantidade = document.querySelector('#quantidade');
         this.HTML_valor = document.querySelector('#valor');
-        this.criar_negociacao();
     }
-    adiciona() {
-        const negociacao = this.criar_negociacao();
-        this.negociacoes.adiciona(negociacao);
-        console.log(this.negociacoes.lista());
-    }
-    criar_negociacao() {
+    cria_negociacao() {
         const exp = /-/g;
         const data = new Date(this.HTML_data.value.replace(exp, ','));
         const quantidade = parseInt(this.HTML_quantidade.value);
-        const value = parseInt(this.HTML_valor.value);
-        return new Negociacao(data, quantidade, value);
+        const valor = parseInt(this.HTML_valor.value);
+        this.adiciona(data, quantidade, valor);
+    }
+    adiciona(data, quantidade, valor) {
+        const negociacao = new Negociacao(data, quantidade, valor);
+        this.negociacoes.adiciona(negociacao);
     }
     limpar_form() {
         this.HTML_data.value = '';
